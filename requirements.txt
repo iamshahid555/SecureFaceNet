@@ -1,0 +1,8 @@
+numpy
+opencv-python
+scikit-learn
+torch
+torchvision
+facenet-pytorch
+opacus
+matplotlib
