@@ -37,6 +37,7 @@ regulations such as GDPR.
 
 ## Project Structure
 
+```
 SecureFaceNet/
 ├── preprocessing/ # Face detection, cropping, normalization
 ├── model/ # Embedding extraction and classifiers
@@ -44,6 +45,7 @@ SecureFaceNet/
 ├── privacy/ # Differentially private training (DP-SGD)
 ├── requirements.txt # Project dependencies
 └── README.md
+```
 
 ---
 
