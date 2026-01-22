@@ -1,9 +1,11 @@
-## Dataset Information
+## Dataset
 
-This project uses the Labeled Faces in the Wild (LFW) dataset.
+This project uses the **Labeled Faces in the Wild (LFW)** dataset for experimental
+evaluation.
 
-Due to privacy and ethical considerations, no raw facial images are included
-in this repository. All images are processed locally on client devices.
+Instead of relying on an external download link, the dataset is loaded directly
+using `scikit-learn`, which automatically handles downloading and caching:
 
-Users can download the dataset from:
-http://vis-www.cs.umass.edu/lfw/
+```python
+from sklearn.datasets import fetch_lfw_people
+```
