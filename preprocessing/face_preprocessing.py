@@ -51,19 +51,19 @@ class FacePreprocessor:
         face = face.astype(np.float32) / 255.0
 
         return face
-    
-if __name__ == "__main__":
-    preprocessor = FacePreprocessor()
-    images, labels, names = preprocessor.load_lfw_data()
+ 
+# if __name__ == "__main__":
+#     preprocessor = FacePreprocessor()
+#     images, labels, names = preprocessor.load_lfw_data()
 
-    print("Testing face detection on multiple images...")
+#     print("Testing face detection on multiple images...")
 
-    for i in range(10):
-        face = preprocessor.detect_and_preprocess(images[i])
-        if face is not None:
-            print(f"Face detected at index {i}")
-            print("Face shape:", face.shape)
-            print("Pixel range:", face.min(), face.max())
-            break
-    else:
-        print("No face detected in first 10 images")
+#     for i in range(10):
+#         face = preprocessor.detect_and_preprocess(images[i])
+#         if face is not None:
+#             print(f"Face detected at index {i}")
+#             print("Face shape:", face.shape)
+#             print("Pixel range:", face.min(), face.max())
+#             break
+#     else:
+#         print("No face detected in first 10 images")

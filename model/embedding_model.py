@@ -27,17 +27,17 @@ class FaceEmbeddingModel:
 
         return embedding.cpu().numpy()[0]
     
-if __name__ == "__main__":
-    from preprocessing.face_preprocessing import FacePreprocessor
+# if __name__ == "__main__":
+#     from preprocessing.face_preprocessing import FacePreprocessor
 
-    preprocessor = FacePreprocessor()
-    images, labels, names = preprocessor.load_lfw_data()
+#     preprocessor = FacePreprocessor()
+#     images, labels, names = preprocessor.load_lfw_data()
 
-    for i in range(10):
-        face = preprocessor.detect_and_preprocess(images[i])
-        if face is not None:
-            embedder = FaceEmbeddingModel()
-            embedding = embedder.get_embedding(face)
-            print("Embedding shape:", embedding.shape)
-            print("Embedding sample:", embedding[:5])
-            break
+#     for i in range(10):
+#         face = preprocessor.detect_and_preprocess(images[i])
+#         if face is not None:
+#             embedder = FaceEmbeddingModel()
+#             embedding = embedder.get_embedding(face)
+#             print("Embedding shape:", embedding.shape)
+#             print("Embedding sample:", embedding[:5])
+#             break

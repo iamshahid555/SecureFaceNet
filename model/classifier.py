@@ -23,38 +23,38 @@ class FaceClassifier:
         predictions = self.model.predict(embeddings)
         return accuracy_score(labels, predictions)
 
-if __name__ == "__main__":
-    from preprocessing.face_preprocessing import FacePreprocessor
-    from model.embedding_model import FaceEmbeddingModel
+# if __name__ == "__main__":
+#     from preprocessing.face_preprocessing import FacePreprocessor
+#     from model.embedding_model import FaceEmbeddingModel
 
-    preprocessor = FacePreprocessor()
-    embedder = FaceEmbeddingModel()
-    classifier = FaceClassifier()
+#     preprocessor = FacePreprocessor()
+#     embedder = FaceEmbeddingModel()
+#     classifier = FaceClassifier()
 
-    images, labels, names = preprocessor.load_lfw_data()
+#     images, labels, names = preprocessor.load_lfw_data()
 
-    embeddings = []
-    valid_labels = []
+#     embeddings = []
+#     valid_labels = []
 
-    for i in range(len(images)):
-        face = preprocessor.detect_and_preprocess(images[i])
-        if face is not None:
-            emb = embedder.get_embedding(face)
-            embeddings.append(emb)
-            valid_labels.append(labels[i])
+#     for i in range(len(images)):
+#         face = preprocessor.detect_and_preprocess(images[i])
+#         if face is not None:
+#             emb = embedder.get_embedding(face)
+#             embeddings.append(emb)
+#             valid_labels.append(labels[i])
 
-        if len(embeddings) >= 200:
-            break
+#         if len(embeddings) >= 200:
+#             break
 
-    embeddings = np.array(embeddings)
-    valid_labels = np.array(valid_labels)
+#     embeddings = np.array(embeddings)
+#     valid_labels = np.array(valid_labels)
 
-    # Simple train/test split
-    split = int(0.8 * len(embeddings))
-    X_train, X_test = embeddings[:split], embeddings[split:]
-    y_train, y_test = valid_labels[:split], valid_labels[split:]
+#     # Simple train/test split
+#     split = int(0.8 * len(embeddings))
+#     X_train, X_test = embeddings[:split], embeddings[split:]
+#     y_train, y_test = valid_labels[:split], valid_labels[split:]
 
-    classifier.train(X_train, y_train)
-    acc = classifier.evaluate(X_test, y_test)
+#     classifier.train(X_train, y_train)
+#     acc = classifier.evaluate(X_test, y_test)
 
-    print("Local client accuracy:", round(acc,2))
+#     print("Local client accuracy:", round(acc,2))
