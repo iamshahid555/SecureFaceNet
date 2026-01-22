@@ -85,6 +85,21 @@ Epoch 5, Loss: 1.1080
 
     Privacy budget ε = 11.49
 
+## System Architecture
+
+The overall architecture of SecureFaceNet is shown below. All sensitive operations
+are performed locally on client devices, while only privacy-protected updates are
+shared with the federated server.
+
+![System Architecture](diagrams/system_architecture.png)
+
+## Differential Privacy Workflow
+
+Differential Privacy is enforced during local training using DP-SGD (Opacus),
+as illustrated below.
+
+![Differential Privacy Workflow](diagrams/differential_privacy_workflow.png)
+
 ## Privacy and Ethical Considerations
 
     •	Raw facial images are processed and retained only on the client side
