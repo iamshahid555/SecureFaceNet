@@ -92,13 +92,13 @@ are performed locally on client devices, while only privacy-protected updates ar
 shared with the federated server.
 
 <p align="center">
-  <img src="diagrams/system_architecture.png" width="650">
+  <img src="diagrams/High-Level System Architecture of SecureFaceNet.png" width="650">
 </p>
 
 ## Differential Privacy Workflow
 
 <p align="center">
-  <img src="diagrams/differential_privacy_workflow.png" width="550">
+  <img src="diagrams/Differential Privacy Workflow.png" width="550">
 </p>
 
 ## Privacy and Ethical Considerations
