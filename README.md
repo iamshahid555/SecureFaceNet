@@ -72,11 +72,14 @@ python -m privacy.dp_training
 This command performs the complete pipeline: 1. Loads the LFW dataset locally 2. Detects and preprocesses faces using OpenCV 3. Extracts facial embeddings using FaceNet 4. Trains a classifier using DP-SGD 5. Computes and reports the privacy budget (ε)
 
 Output:
+
+```
 Epoch 1, Loss: 1.1164
 Epoch 2, Loss: 1.1143
 Epoch 3, Loss: 1.1125
 Epoch 4, Loss: 1.1115
 Epoch 5, Loss: 1.1080
+```
 
     Privacy budget ε = 11.49
 
