@@ -91,14 +91,15 @@ The overall architecture of SecureFaceNet is shown below. All sensitive operatio
 are performed locally on client devices, while only privacy-protected updates are
 shared with the federated server.
 
-![System Architecture](diagrams/High-Level%20System%20Architecture%20of%20SecureFaceNet.png)
+<p align="center">
+  <img src="diagrams/system_architecture.png" width="650">
+</p>
 
 ## Differential Privacy Workflow
 
-Differential Privacy is enforced during local training using DP-SGD (Opacus),
-as illustrated below.
-
-![Differential Privacy Workflow](diagrams/Differential%20Privacy%20Workflow.png)
+<p align="center">
+  <img src="diagrams/differential_privacy_workflow.png" width="550">
+</p>
 
 ## Privacy and Ethical Considerations
 
